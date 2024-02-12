@@ -31,7 +31,7 @@ model = Sequential()
 model.add(Dense(30, activation='sigmoid', input_shape=(784,)))
 model.add(Dense(num_classes, activation='sigmoid'))
 model.summary()
-model.compile(loss='categorical_crossentropy',optimizer=Adam(learning_rate=learning_rate),metrics=['accuracy'])
+model.compile(loss='binary_crossentropy',optimizer=Adam(learning_rate=learning_rate),metrics=['accuracy'])
 history = model.fit(x_trainv, y_trainc,
                     batch_size=batch_size,
                     epochs=epochs,
